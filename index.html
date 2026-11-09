@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/HP/Downloads/yumm_numm_bistro_demo.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#151515">
+  <meta name="description" content="Yumm Numm Bistro, Khilgaon — burgers, pizza, pasta, desserts and refreshing drinks.">
+  <title>Yumm Numm Bistro | Khilgaon, Dhaka</title>
+  <style>
+    :root{
+      --bg:#11110f;--panel:#1b1b18;--panel2:#24231f;--text:#f8f5ed;
+      --muted:#b9b3a7;--orange:#ff7b32;--orange2:#ff9b52;--line:#39362f;
+      --cream:#fff0dc;--teal:#8fe2df;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(17,17,15,.92);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff13}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.7px;font-size:1.16rem}
+    .brand-mark{width:43px;height:43px;border-radius:13px;background:var(--orange);display:grid;place-items:center;color:#17130f;font-size:1.5rem;box-shadow:0 7px 25px #ff7b3230}
+    .brand small{display:block;color:var(--orange2);font-size:.62rem;letter-spacing:2px;text-transform:uppercase;margin-top:-4px}
+    .navlinks{display:flex;gap:28px;color:#ddd7cd;font-size:.92rem}
+    .navlinks a:hover{color:var(--orange2)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:12px 20px;background:var(--orange);color:#17130f;font-weight:800;cursor:pointer;transition:.2s}
+    .nav-cta:hover,.btn:hover{background:var(--orange2);transform:translateY(-2px)}
+    .menu-toggle{display:none;background:transparent;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 11px}
+    .hero{position:relative;overflow:hidden;padding:92px 0 84px;background:radial-gradient(ellipse at 78% 45%,#73371955 0,transparent 37%),linear-gradient(120deg,#151512 10%,#1b1713 65%,#25160f)}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid #ff9b5226;border-radius:50%;right:-100px;top:-180px;box-shadow:0 0 0 45px #ff9b5208,0 0 0 90px #ff9b5205}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--orange2);font-size:.76rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}
+    .eyebrow:before{content:"";width:28px;height:2px;background:var(--orange)}
+    h1{font-size:clamp(3.2rem,7vw,6.1rem);line-height:.96;letter-spacing:-5px;margin:19px 0 22px;font-weight:950}
+    h1 span{color:var(--orange)}
+    .hero p{max-width:510px;color:#c8c0b4;font-size:1.08rem;margin:0 0 30px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+    .btn-outline{display:inline-flex;align-items:center;justify-content:center;border:1px solid #ffffff48;border-radius:999px;padding:12px 20px;font-weight:750}
+    .btn-outline:hover{border-color:var(--orange);color:var(--orange2)}
+    .hero-note{display:flex;align-items:center;gap:12px;margin-top:35px;color:#c9c1b6;font-size:.88rem}
+    .live-dot{width:9px;height:9px;background:#65d68b;border-radius:50%;box-shadow:0 0 0 5px #65d68b20}
+    .food-art{min-height:380px;display:grid;place-items:center;position:relative}
+    .food-circle{width:min(390px,80vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 28%,#ffbd78,#ef762f 45%,#7b3218 78%);display:grid;place-items:center;box-shadow:0 35px 90px #0009,inset -20px -25px 50px #4c1e1670;transform:rotate(-8deg)}
+    .food-emoji{font-size:clamp(9rem,22vw,15rem);filter:drop-shadow(0 20px 12px #34180b70);transform:rotate(8deg)}
+    .floating-tag{position:absolute;background:#201c17;border:1px solid #ffffff24;border-radius:15px;padding:13px 17px;box-shadow:0 14px 35px #0006}
+    .floating-tag strong{display:block;color:var(--orange2);font-size:1.05rem}
+    .floating-tag small{color:#d1c8bb}
+    .tag-one{top:48px;right:0}.tag-two{bottom:35px;left:0}
+    .section{padding:82px 0}
+    .section-head{text-align:center;max-width:650px;margin:0 auto 38px}
+    .section-head .eyebrow{justify-content:center}
+    h2{font-size:clamp(2rem,4vw,3.15rem);letter-spacing:-1.7px;line-height:1.1;margin:13px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .feature-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .feature{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:23px;display:flex;gap:15px;align-items:flex-start}
+    .feature-icon{width:47px;height:47px;flex:none;border-radius:14px;background:#ff7b321b;display:grid;place-items:center;font-size:1.45rem}
+    .feature h3{margin:0 0 5px;font-size:1rem}.feature p{margin:0;color:var(--muted);font-size:.88rem}
+    .menu-section{background:#171714}
+    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .menu-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:23px;transition:.2s}
+    .menu-card:hover{transform:translateY(-4px);border-color:#ff7b3270}
+    .menu-card-head{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:15px}
+    .menu-icon{width:47px;height:47px;display:grid;place-items:center;border-radius:14px;background:#ff7b321b;font-size:1.5rem}
+    .menu-card h3{margin:0;font-size:1.14rem}.menu-card-head small{color:var(--orange2);font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px}
+    .dish{display:flex;justify-content:space-between;gap:12px;padding:8px 0;color:#e9e3d9;font-size:.91rem}
+    .dish span:last-child{white-space:nowrap;color:var(--orange2);font-weight:800}
+    .dish-note{color:var(--muted);font-size:.78rem;margin:-3px 0 7px}
+    .menu-foot{text-align:center;color:var(--muted);font-size:.85rem;margin-top:27px}
+    .menu-foot strong{color:var(--orange2)}
+    .special{padding:72px 0}
+    .special-box{border-radius:24px;padding:42px;background:linear-gradient(110deg,#3b2116,#211913 60%,#171512);border:1px solid #ff9b5230;display:flex;align-items:center;justify-content:space-between;gap:30px;overflow:hidden}
+    .special-box h2{margin:10px 0;font-size:clamp(1.8rem,4vw,2.7rem)}
+    .special-box p{color:#d1c3b5;margin:0;max-width:560px}
+    .special-stamp{flex:none;width:145px;height:145px;border:2px dashed #ff9b5280;border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--orange2);font-weight:900;transform:rotate(10deg)}
+    .contact{background:#171714}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .contact-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px}
+    .contact-card h3{margin:0 0 17px;font-size:1.25rem}
+    .contact-line{display:flex;gap:13px;margin:17px 0;color:#e7e0d6}
+    .contact-line .ico{width:27px;color:var(--orange2);font-size:1.15rem}
+    .contact-line small{display:block;color:var(--muted);font-size:.82rem}
+    .map-placeholder{min-height:240px;border-radius:15px;background:linear-gradient(135deg,#25251f,#1b201c);display:grid;place-items:center;text-align:center;padding:20px;border:1px solid #ffffff12}
+    .map-placeholder .pin{font-size:2.5rem}
+    .map-placeholder p{color:var(--muted);margin:6px 0 16px}
+    footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+    .footer-brand{font-weight:900;color:var(--text)}
+    .footer-brand span{color:var(--orange)}
+    @media(max-width:850px){
+      .hero-grid{grid-template-columns:1fr;gap:20px}.food-art{min-height:310px}.food-circle{width:300px}
+      .menu-grid{grid-template-columns:repeat(2,1fr)}.feature-row{grid-template-columns:1fr}
+      .navlinks{gap:16px}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(100% - 30px,1160px)}.nav{height:66px}.nav-cta{display:none}.menu-toggle{display:block}
+      .navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:#171714;padding:18px 22px 22px;border-bottom:1px solid var(--line);flex-direction:column}
+      .navlinks.open{display:flex}.hero{padding:65px 0 45px}h1{letter-spacing:-3px}
+      .food-art{min-height:270px}.food-circle{width:250px}.tag-one{right:0;top:20px}.tag-two{bottom:8px;left:0}
+      .section{padding:62px 0}.menu-grid{grid-template-columns:1fr}.special-box{padding:28px;align-items:flex-start}.special-stamp{width:90px;height:90px;font-size:.75rem}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="file:///C:/Users/HP/Downloads/yumm_numm_bistro_demo.html#home" aria-label="Yumm Numm Bistro home">
+        <span class="brand-mark">Y</span>
+        <span>YUMM NUMM<small>BISTRO · KHILGAON</small></span>
+      </a>
+      <nav class="navlinks" id="navlinks">
+        <a href="file:///C:/Users/HP/Downloads/yumm_numm_bistro_demo.html#about">About</a><a href="file:///C:/Users/HP/Downloads/yumm_numm_bistro_demo.html#menu">Our Menu</a><a href="file:///C:/Users/HP/Downloads/yumm_numm_bistro_demo.html#contact">Find Us</a>
+      </nav>
+      <a class="nav-cta" href="https://www.foodpanda.com.bd/" target="_blank" rel="noopener">Order Online ↗</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Good food · Good mood</div>
+          <h1>THE BITE<br>YOU'LL <span>REMEMBER.</span></h1>
+          <p>Big flavours, feel-good food and something delicious for every craving. Come hungry — leave happy.</p>
+          <div class="hero-actions">
+            <a class="btn" href="file:///C:/Users/HP/Downloads/yumm_numm_bistro_demo.html#menu">Explore the menu <span>→</span></a>
+            <a class="btn-outline" href="tel:+8801871723505">Call to order</a>
+          </div>
+          <div class="hero-note"><span class="live-dot"></span> Listed as open 24 hours · Khilgaon, Dhaka</div>
+        </div>
+        <div class="food-art" aria-label="Illustration of a delicious burger">
+          <div class="food-circle"><div class="food-emoji">🍔</div></div>
+          <div class="floating-tag tag-one"><strong>Made for cravings</strong><small>Burgers · Pizza · Pasta</small></div>
+          <div class="floating-tag tag-two"><strong>৳200–400</strong><small>Reported per-person range</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Welcome to Yumm Numm</div>
+          <h2>A little bit of everything.<br><span style="color:var(--orange)">A whole lot of yum.</span></h2>
+          <p>From loaded burgers to cheesy pizza, creamy pasta and chilled drinks — find your next favourite at Yumm Numm Bistro.</p>
+        </div>
+        <div class="feature-row">
+          <article class="feature"><div class="feature-icon">🍔</div><div><h3>Burger cravings, sorted</h3><p>Chicken and beef burgers, from classic favourites to smoky BBQ flavours.</p></div></article>
+          <article class="feature"><div class="feature-icon">🍕</div><div><h3>Made for sharing</h3><p>Signature pizzas, baked pasta and chow mein for a satisfying meal.</p></div></article>
+          <article class="feature"><div class="feature-icon">🥤</div><div><h3>Something to sip</h3><p>Mocktails, milkshakes and coffee — the perfect finish to your meal.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Fresh from our menu</div>
+          <h2>Find your kind of <span style="color:var(--orange)">delicious.</span></h2>
+          <p>A selection of items and prices transcribed from the menu photo. Prices are in Bangladeshi taka (৳).</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <div class="menu-card-head"><div class="menu-icon">🍔</div><div><small>Handheld favourites</small><h3>Chicken Burgers</h3></div></div>
+            <div class="dish"><span>Classic Chicken Burger</span><span>৳189</span></div>
+            <div class="dish"><span>Cheese Chicken Burger</span><span>৳219</span></div>
+            <div class="dish"><span>Smoky BBQ Chicken Burger</span><span>৳219</span></div>
+            <div class="dish"><span>Double Cheese Chicken Burger</span><span>৳249</span></div>
+            <div class="dish"><span>Chicken Sausage Delight</span><span>৳269</span></div>
+            <div class="dish"><span>Chicken Bacon Burger</span><span>৳279</span></div>
+            <div class="dish"><span>Mushroom Chicken Burger</span><span>৳279</span></div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-head"><div class="menu-icon">🥩</div><div><small>Big and satisfying</small><h3>Beef Burgers</h3></div></div>
+            <div class="dish"><span>Classic Beef Burger</span><span>৳219</span></div>
+            <div class="dish"><span>Cheese Beef Burger</span><span>৳249</span></div>
+            <div class="dish"><span>Smoky BBQ Beef Burger</span><span>৳249</span></div>
+            <div class="dish"><span>Beef Sausage Delight</span><span>৳279</span></div>
+            <div class="dish"><span>Beef Bacon Burger</span><span>৳299</span></div>
+            <div class="dish"><span>Mushroom Beef Burger</span><span>৳299</span></div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-head"><div class="menu-icon">🍝</div><div><small>Oven baked goodness</small><h3>Baked Pasta</h3></div></div>
+            <div class="dish"><span>Naga Baked Pasta</span><span>৳269</span></div>
+            <div class="dish"><span>Chef's Special Baked Pasta</span><span>৳299</span></div>
+            <div class="dish"><span>Creamy Alfredo Pasta</span><span>৳289</span></div>
+            <div class="dish"><span>Sizzling Tikka Pasta</span><span>৳309</span></div>
+            <div class="dish" style="margin-top:10px"><span>Special Chow Mein (1:2 / 1:3)</span><span>৳299 / 379</span></div>
+            <div class="dish"><span>Spaghetti Bolognese</span><span>৳349</span></div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-head"><div class="menu-icon">🍕</div><div><small>Signature selection</small><h3>Pizza · 10″ / 12″</h3></div></div>
+            <div class="dish"><span>Classic Margherita</span><span>৳449 / 559</span></div>
+            <div class="dish"><span>B.B.Q Chicken Pizza</span><span>৳649</span></div>
+            <div class="dish"><span>Beef Pepperoni Pizza</span><span>৳529 / 729</span></div>
+            <div class="dish"><span>Four Seasons Pizza</span><span>৳549 / 749</span></div>
+            <div class="dish"><span>Special Sausage Ring Pizza</span><span>৳569 / 739</span></div>
+            <div class="dish"><span>Chef's Special Yumm Numm Pizza</span><span>৳1,199</span></div>
+            <p class="dish-note">Chef's special listed as 16″ square shape.</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-head"><div class="menu-icon">🍰</div><div><small>Sweet endings</small><h3>Desserts</h3></div></div>
+            <div class="dish"><span>Brownie Obsession</span><span>৳269</span></div>
+            <p class="dish-note">Brownie, vanilla ice cream, chocolate chips, chocolate and caramel syrup.</p>
+            <div class="dish"><span>Affogato</span><span>৳279</span></div>
+            <p class="dish-note">Brewed espresso, vanilla ice cream, chocolate syrup, coffee beans and chocolate chips.</p>
+            <div class="dish"><span>Ice Cream Sundae</span><span>৳339</span></div>
+            <p class="dish-note">Vanilla and chocolate ice cream, syrups, cashew nuts and whipped cream.</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-head"><div class="menu-icon">🍹</div><div><small>Cool refreshments</small><h3>Mocktails</h3></div></div>
+            <div class="dish"><span>Berry Mango</span><span>৳199</span></div>
+            <div class="dish"><span>Orange Sunrise</span><span>৳179</span></div>
+            <div class="dish"><span>Strawberry</span><span>৳189</span></div>
+            <div class="dish"><span>Apple</span><span>৳189</span></div>
+            <div class="dish"><span>Blue Raspberry</span><span>৳219</span></div>
+            <div class="dish"><span>Virgin Mojito</span><span>৳179</span></div>
+            <div class="dish"><span>Mint Lemonade</span><span>৳139</span></div>
+            <div class="dish"><span>Lime Soda</span><span>৳139</span></div>
+            <div class="dish"><span>Masala Soda</span><span>৳139</span></div>
+            <div class="dish"><span>Blue Ocean</span><span>৳159</span></div>
+            <div class="dish"><span>Electric Lemonade</span><span>৳189</span></div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-head"><div class="menu-icon">🥤</div><div><small>Thick and creamy</small><h3>Milkshakes</h3></div></div>
+            <div class="dish"><span>Chocolate</span><span>৳199</span></div>
+            <div class="dish"><span>Vanilla</span><span>৳199</span></div>
+            <div class="dish"><span>Oreo</span><span>৳219</span></div>
+            <div class="dish"><span>Strawberry</span><span>৳219</span></div>
+            <div class="dish"><span>Mango</span><span>৳199</span></div>
+            <div class="dish"><span>Grasshopper</span><span>৳219</span></div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-head"><div class="menu-icon">☕</div><div><small>Your coffee break</small><h3>Coffee &amp; More</h3></div></div>
+            <div class="dish"><span>Espresso (Hot / Cold)</span><span>৳130 / 140</span></div>
+            <div class="dish"><span>Cappuccino (Hot / Cold)</span><span>৳219 / 249</span></div>
+            <div class="dish"><span>Americano (Hot / Cold)</span><span>৳159 / 169</span></div>
+            <div class="dish"><span>Cafe Latte (Hot / Cold)</span><span>৳249 / 269</span></div>
+            <div class="dish"><span>Hot Chocolate</span><span>৳189</span></div>
+            <div class="dish"><span>Cold Chocolate</span><span>৳199</span></div>
+            <div class="dish"><span>Chocolate Latte</span><span>৳229</span></div>
+            <div class="dish"><span>Mochaccino</span><span>৳219</span></div>
+          </article>
+        </div>
+        <p class="menu-foot">Menu and prices may change. <strong>Please confirm current prices when ordering.</strong></p>
+      </div>
+    </section>
+
+    <section class="special">
+      <div class="wrap">
+        <div class="special-box">
+          <div><div class="eyebrow">Your next food stop</div><h2>Craving something <span style="color:var(--orange)">yumm?</span></h2><p>Drop by in Khilgaon or call the bistro to ask about today's favourites and place an order.</p><div style="margin-top:22px"><a class="btn" href="tel:+8801871723505">Call 01871-723505 ↗</a></div></div>
+          <div class="special-stamp">THE BITE<br>YOU'LL<br>REMEMBER</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Come say hello</div><h2>Find us in <span style="color:var(--orange)">Khilgaon.</span></h2>
+          <p>We'd love to be part of your next meal.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Yumm Numm Bistro – Khilgaon</h3>
+            <div class="contact-line"><div class="ico">📍</div><div>Level 2, Skyview Nazma Tower,<br>368/B, Dhaka 1219<small>Khilgaon, Dhaka, Bangladesh</small></div></div>
+            <div class="contact-line"><div class="ico">☎</div><div><a href="tel:+8801871723505">01871-723505</a><small>Call for orders and enquiries</small></div></div>
+            <div class="contact-line"><div class="ico">◷</div><div>Listed as open 24 hours<small>Please confirm directly before visiting.</small></div></div>
+            <div class="contact-line"><div class="ico">⌖</div><div>Plus Code: QC2F+JF Dhaka</div></div>
+          </div>
+          <div class="contact-card">
+            <div class="map-placeholder"><div><div class="pin">📍</div><strong>Yumm Numm Bistro</strong><p>Skyview Nazma Tower, Khilgaon</p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Yumm+Numm+Bistro+Khilgaon+Dhaka" target="_blank" rel="noopener">Open in Google Maps ↗</a></div></div>
+            <p style="color:var(--muted);font-size:.82rem;margin:13px 2px 0">Online ordering: <a href="https://www.foodpanda.com.bd/" target="_blank" rel="noopener" style="color:var(--orange2)">Foodpanda Bangladesh ↗</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-row"><div class="footer-brand">YUMM NUMM <span>BISTRO</span></div><div>© <span id="year">2026</span> Yumm Numm Bistro · Khilgaon, Dhaka</div><div>The bite you'll remember.</div></div></footer>
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const links = document.getElementById('navlinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.textContent = isOpen ? '✕' : '☰';
+    });
+    links.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body></html>
